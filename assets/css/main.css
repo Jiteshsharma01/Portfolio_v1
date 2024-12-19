@@ -89,7 +89,7 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+.email-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -99,7 +99,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.email-form .sent-message {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -109,7 +109,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .loading {
+.email-form .loading {
   display: none;
   background: var(--surface-color);
   text-align: center;
@@ -117,7 +117,7 @@ h6 {
   margin-bottom: 24px;
 }
 
-.php-email-form .loading:before {
+.email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -126,10 +126,10 @@ h6 {
   margin: 0 10px -6px 0;
   border: 3px solid var(--accent-color);
   border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
+  animation: email-form-loading 1s linear infinite;
 }
 
-@keyframes php-email-form-loading {
+@keyframes email-form-loading {
   0% {
     transform: rotate(0deg);
   }
@@ -518,7 +518,7 @@ section,
   justify-content: center;
 }
 
-.hero img {
+.hero img.bg-img {
   position: absolute;
   inset: 0;
   display: block;
@@ -558,7 +558,7 @@ section,
 }
 
 .hero .social-links {
-  margin-top: 25px;
+  margin: 25px 0 18px;
 }
 
 .hero .social-links a {
@@ -572,6 +572,13 @@ section,
 
 .hero .social-links a:hover {
   color: var(--accent-color);
+}
+
+.hero .download-resume-btn {
+  padding: 10px 14px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
 }
 
 @media (max-width: 768px) {
@@ -1126,13 +1133,13 @@ section,
   color: var(--contrast-color);
 }
 
-.contact .php-email-form {
+.contact .email-form {
   height: 100%;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
+.contact .email-form input[type=text],
+.contact .email-form input[type=email],
+.contact .email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
@@ -1142,19 +1149,19 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
+.contact .email-form input[type=text]:focus,
+.contact .email-form input[type=email]:focus,
+.contact .email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
+.contact .email-form input[type=text]::placeholder,
+.contact .email-form input[type=email]::placeholder,
+.contact .email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .email-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1163,7 +1170,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
@@ -1472,8 +1479,25 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# Scrollbar
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+/* WebKit Browsers */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0563bb;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0563bb transparent;
 }
