@@ -257,9 +257,17 @@ h6 {
 .navmenu a:hover,
 .navmenu .active,
 .navmenu .active:focus,
+.navmenu a.skill:hover,
+.navmenu .skill.active,
+.navmenu .skill.active:focus,
 .navmenu li:hover>a {
   color: var(--contrast-color);
   background: var(--nav-hover-color);
+}
+
+.navmenu a.skill.active img,
+.navmenu a.skill:hover img {
+  filter: drop-shadow(0px 1px 3px white);
 }
 
 .navmenu a:hover,
@@ -1485,7 +1493,7 @@ section,
 
 @media only screen and (max-width: 768px) {
   section, .section{
-    padding: 60px 0;
+    padding: 60px 20px;
   }
 }
 
