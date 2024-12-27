@@ -1,5 +1,4 @@
-Thanks for downloading this template!
+# Hi, This is my portfolio website code
 
-Template Name: Portfolio_v1
-
-This is a template for Portfolio to showcase what i had done so far.
+## Live Link
+- Checkout my portfolio website here [Jitesh Sharma](https://jitesh-portfolio-v1.netlify.app/)
