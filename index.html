@@ -101,7 +101,7 @@
               <a target="_blank" rel="noreferrer" href="https://github.com/Jiteshsharma01"><i class="bi bi-github"></i></a>
               <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sharmajitesh01/"><i class="bi bi-linkedin"></i></a>
             </div>
-            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1DOPii4d2miRXUHcSeQp-poxpa45AXb7-/view?usp=sharing" class="download-resume-btn" target="_blank">Resume</a>
+            <a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1wG5RLVKAbJAt4B2PV1jMOZSFS-B9yejg/view?usp=sharing" class="download-resume-btn">Resume</a>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>95297-26878</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Jaipur, India</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="dynamic-age">25</span></li>
                 </ul>
               </div>
             </div>
@@ -434,7 +434,7 @@
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Location</h3>
-                <p>E Block, Vaishali nagar, Jaipur, India, 302021</p>
+                <p>Jaipur, Rajasthan, India</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -524,6 +524,21 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function calculateAge(birthDateString) {
+      const today = new Date();
+      const birthDate = new Date(birthDateString);
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      // Subtract 1 year if the birthday hasn't happened yet this year
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      } 
+      return age;
+    }
+    document.getElementById('dynamic-age').textContent = calculateAge('1999-10-17');
+  </script>
 
 </body>
 
